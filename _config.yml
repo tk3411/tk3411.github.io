@@ -26,8 +26,8 @@ author:
   avatar           : "profile.png"
   name             : "Taeho Kim"
   pronouns         : # example: "she/her"  
-  #bio              : "Short biography for the left-hand sidebar"
-  #location         : "Earth"
+  bio              : "Physics PhD student"
+  #location         : "St. Louj"
   employer         : "Washington University in St. Louis"
   uri              : # URL
   #email            : "none@example.org" 
