@@ -1,27 +1,39 @@
 ---
-layout: archive
+layout: single
 title: "CV"
 permalink: /cv/
 ---
 
 <style>
-  body { 
-    background-color: #000; 
+  html, body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100%;
   }
 
-  .masthead, .page__footer, .sidebar { 
-    display: none; 
+  /* Hides the headers/sidebars */
+  .masthead, .page__footer, .sidebar, .page__title, .page__meta {
+    display: none;
   }
 
-  .container { 
-    max-width: 100; 
-    margin: 0; 
-    padding: 0; 
+  /* Centers the content */
+  #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0;
+  }
+
+  /* Ensures the PDF container fills the center */
+  .container {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
   }
 </style>
 
-<object data="{{ site.baseurl }}/files/cv.pdf" type="application/pdf" width="100%" height="100vh">
-  <p>It appears your browser doesn't support embedded PDFs. 
-     <a href="{{ site.baseurl }}/files/cv.pdf" style="color: white;">Click here to download the PDF instead.</a>
-  </p>
+<object data="{{ site.baseurl }}/files/cv.pdf" type="application/pdf" width="100%" height="100%">
+  <p>Your browser doesn't support PDFs. <a href="{{ site.baseurl }}/files/cv.pdf" style="color: white;">Download the PDF here.</a></p>
 </object>
