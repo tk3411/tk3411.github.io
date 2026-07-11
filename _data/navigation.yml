@@ -20,8 +20,13 @@ main:
   #- title: "Portfolio"
     #url: /portfolio/
         
-  - title: "Course Materials"
+  - title: "Teaching"
     url: /courses/
+    children:
+    - title: "MAT320"
+      url: /courses/mat320/
+    - title: "PHY301"
+      url: /courses/phy301/
     
   - title: "CV"
     url: /cv/
