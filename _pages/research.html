@@ -9,10 +9,10 @@ My work spans several orders of magnitude in physical scale, from studying effec
 </p>
 
 <style>
-/* Ensure consistent box model */
+
 .phys-timeline {
   position: relative;
-  padding-left: 40px; /* Space for the line and markers */
+  padding-left: 40px; 
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -22,10 +22,11 @@ My work spans several orders of magnitude in physical scale, from studying effec
   content: '';
   position: absolute;
   left: 20px;
-  top: 15px; /* Aligned with top arrow */
-  bottom: 15px; /* Aligned with bottom arrow */
+  top: 22px;
+  bottom: 22px; 
   width: 2px;
   background: #000;
+  transform: translateX(-50%); 
 }
 
 /* The Item Dots */
@@ -37,19 +38,18 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .phys-item::before {
   content: '';
   position: absolute;
-  left: 20px; /* Matches line position */
+  left: 20px;
   top: 5px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #fff;
   border: 2px solid #000;
-  transform: translateX(-50%); /* Perfect centering */
+  transform: translateX(-50%); 
   transition: all 0.2s;
   z-index: 1;
 }
 
-/* Axis Arrows (Caps) */
 .phys-arrow-top, .phys-arrow-bot {
   position: absolute;
   left: 20px;
@@ -58,28 +58,31 @@ My work spans several orders of magnitude in physical scale, from studying effec
   font-weight: bold;
   color: #000;
   z-index: 2;
-  background: #fff; /* Mask behind arrow to break the line visually */
-  padding: 0 4px;
+  
 }
 .phys-arrow-top { top: 0px; }
 .phys-arrow-bot { bottom: 0px; }
 
-/* Color Coding Logic */
+
 .ism.active::before { background: #0066cc; border-color: #0066cc; }
 .ism.active .phys-body { border-left-color: #0066cc; }
+.ism.active .phys-title { color: #0066cc; }
 
 .giants.active::before { background: #cc0000; border-color: #cc0000; }
 .giants.active .phys-body { border-left-color: #cc0000; }
+.giants.active .phys-title { color: #cc0000; }
 
 .nebula.active::before, .fqh.active::before { background: #d4ac0d; border-color: #d4ac0d; }
 .nebula.active .phys-body, .fqh.active .phys-body { border-left-color: #d4ac0d; }
+.nebula.active .phys-title, .fqh.active .phys-title { color: #d4ac0d; }
 
 .neutron.active::before { background: #666666; border-color: #666666; }
 .neutron.active .phys-body { border-left-color: #666666; }
+.neutron.active .phys-title { color: #666666; }
 
-/* Content Styles */
+
 .phys-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.phys-title { font-size: 0.9rem; font-weight: 600; color: #000; margin: 0; }
+.phys-title { font-size: 0.9rem; font-weight: 600; color: #000; margin: 0; transition: color 0.2s ease; }
 .phys-badge { font-size: 0.62rem; background: #eee; color: #000; padding: 2px 6px; border-radius: 3px; }
 .phys-hint { margin-left: auto; font-size: 0.68rem; color: #000; }
 .phys-body {
@@ -94,6 +97,20 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .phys-concept { font-size: 0.8rem; color: #000; font-style: italic; margin: 0 0 8px; }
 .phys-desc { font-size: 0.8rem; color: #000; line-height: 1.65; margin: 0 0 8px; }
 .phys-status { font-size: 0.7rem; color: #000; margin: 0; padding-top: 8px; border-top: 1px solid #000; }
+
+
+.phys-image-wrapper {
+  margin-top: 12px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #eaeaea;
+}
+.phys-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 </style>
 
 <div class="phys-timeline">
@@ -106,6 +123,9 @@ My work spans several orders of magnitude in physical scale, from studying effec
       <span class="phys-hint">expand ↓</span>
     </div>
     <div class="phys-body">
+      <div class="phys-image-wrapper">
+        <img src="your-image-path-here.jpg" alt="Multiphase Galactic Web" />
+      </div>
       <p class="phys-concept">The interstellar medium exists in various phases - cold molecular clouds, warm neutral gas, hot ionized plasma (and more) interacting with their surroundings.</p>
       <p class="phys-desc">Working with Chang-goo Kim and James Sunseri, I analyzed the spatial morphology of the multiphase ISM using high-resolution TIGRESS magnetohydrodynamic simulations. We characterized how different gas phases are distributed across the galactic "web" and their correlations.</p>
       <p class="phys-status">In preparation · 2027</p>
@@ -119,6 +139,9 @@ My work spans several orders of magnitude in physical scale, from studying effec
       <span class="phys-hint">expand ↓</span>
     </div>
     <div class="phys-body">
+      <div class="phys-image-wrapper">
+        <img src="your-image-path-here.jpg" alt="Missing Red Giants" />
+      </div>
       <p class="phys-concept">Within a few tenths of a parsec of Sgr A*, the Milky Way's central supermassive black hole, bright red giant stars are far rarer than stellar population models predict.</p>
       <p class="phys-desc">Under Professor Jeremy Goodman's supervision, I built Monte Carlo simulations tracking stellar evolution on the red giant branch alongside resonant and nonresonant two-body relaxation and stellar collisions. We find that tidal stripping by the black hole alone fails to explain the deficit; loss cone diffusion rates grow only logarithmically with stellar radius while red giant lifetimes shorten at a much faster rate. Instead, stellar collisions, amplified by the rapidly growing geometric cross section of evolving giants, seem more likely as an explanation. The simulations also predict an anisotropy in surviving red giant velocity distributions near Sgr A*.</p>
       <p class="phys-status">Published · The Astrophysical Journal 1001:109 (2026)</p>
@@ -132,6 +155,9 @@ My work spans several orders of magnitude in physical scale, from studying effec
       <span class="phys-hint">expand ↓</span>
     </div>
     <div class="phys-body">
+      <div class="phys-image-wrapper">
+        <img src="your-image-path-here.jpg" alt="Fried Egg Nebula" />
+      </div>
       <p class="phys-concept">Post-red supergiant yellow hypergiants are among the most extreme evolved massive stars known.</p>
       <p class="phys-desc">Under Dr. Evgenia Koumpia's supervision, I analyzed the L and M band spectral and interferometric data for IRAS 17163–3907 and IRC+10420. The analysis constrains the spatial structure, mass-loss rate, and geometry of the circumstellar envelope across multiple angular scales.</p>
       <p class="phys-status">Published · Astronomy & Astrophysics 709:A83 (2026)</p>
@@ -145,6 +171,9 @@ My work spans several orders of magnitude in physical scale, from studying effec
       <span class="phys-hint">expand ↓</span>
     </div>
     <div class="phys-body">
+      <div class="phys-image-wrapper">
+        <img src="your-image-path-here.jpg" alt="Neutron Star Tides" />
+      </div>
       <p class="phys-concept">Binary neutron stars emit detectable gravitational waves close to merger, whose waveform encodes each star's internal structure, offering a direct probe of their interior nuclear matter at a combination of density and temperature (currently) unreproducible on Earth.</p>
       <p class="phys-desc">In my senior thesis with Dr. Abhishek Hegade and Professor Sylvia Biscoveanu, I studied how dynamical tides modify the gravitational waveform during binary inspiral. Accurately modeling these tidal signatures is essential for inverting future LIGO/Virgo/KAGRA detections into constraints on the nuclear equation of state.</p>
       <p class="phys-status">Undergraduate thesis · Princeton University (2026)</p>
@@ -158,6 +187,9 @@ My work spans several orders of magnitude in physical scale, from studying effec
       <span class="phys-hint">expand ↓</span>
     </div>
     <div class="phys-body">
+      <div class="phys-image-wrapper">
+        <img src="your-image-path-here.jpg" alt="FQH Ground States" />
+      </div>
       <p class="phys-concept">Fractional Quantum Hall (FQH) states reveal the rich topological order of electronic systems under high magnetic fields.</p>
       <p class="phys-desc">I am investigating the classification of FQH states projected to the lowest Landau level (LLL) on various geometries, applying tools from category theory to describe gapped quantum liquids and associated topological phenomena.</p>
       <p class="phys-status">Ongoing · 2026</p>
