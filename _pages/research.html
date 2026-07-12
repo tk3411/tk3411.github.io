@@ -5,19 +5,20 @@ permalink: /research/
 author_profile: true
 ---
 <p style="color:#000;font-size:0.88rem;margin-bottom:2rem;">
-My work spans several orders of magnitude in physical scale, from studying "fractional" electrons to the interstellar medium. Click to expand!
+My work spans several orders of magnitude in physical scale, from studying effective fractions of electrons to the interstellar medium. Click to expand!
 </p>
 
 <style>
 .phys-timeline {
   position: relative;
-  padding-left: 30px;
-  padding-top: 10px;
+  padding-left: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .phys-timeline::before {
   content: '';
   position: absolute;
-  left: 12px;
+  left: 20px;
   top: 0;
   bottom: 0;
   width: 2px;
@@ -31,18 +32,18 @@ My work spans several orders of magnitude in physical scale, from studying "frac
 .phys-item::before {
   content: '';
   position: absolute;
-  left: -18px;
+  left: 20px;
   top: 5px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #fff;
   border: 2px solid #000;
+  transform: translateX(-50%);
   transition: all 0.2s;
   z-index: 1;
 }
 
-/* Color Coding */
 .ism.active::before { background: #0066cc; border-color: #0066cc; }
 .ism.active .phys-body { border-left-color: #0066cc; }
 
@@ -71,9 +72,22 @@ My work spans several orders of magnitude in physical scale, from studying "frac
 .phys-concept { font-size: 0.8rem; color: #000; font-style: italic; margin: 0 0 8px; }
 .phys-desc { font-size: 0.8rem; color: #000; line-height: 1.65; margin: 0 0 8px; }
 .phys-status { font-size: 0.7rem; color: #000; margin: 0; padding-top: 8px; border-top: 1px solid #000; }
+
+.phys-axis-cap {
+  position: absolute;
+  left: 20px;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  background: transparent;
+}
 </style>
 
 <div class="phys-timeline">
+
+  <div class="phys-axis-cap" style="top: 0px;">▲<br>large</div>
 
   <div class="phys-item ism" onclick="togglePhys(this)">
     <div class="phys-header">
@@ -139,6 +153,8 @@ My work spans several orders of magnitude in physical scale, from studying "frac
       <p class="phys-status">Ongoing · 2026</p>
     </div>
   </div>
+
+  <div class="phys-axis-cap" style="bottom: 0px;">▼<br>small</div>
 
 </div>
 
