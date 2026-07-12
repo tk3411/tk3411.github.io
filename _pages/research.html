@@ -9,21 +9,26 @@ My work spans several orders of magnitude in physical scale, from studying effec
 </p>
 
 <style>
+/* Ensure consistent box model */
 .phys-timeline {
   position: relative;
-  padding-left: 60px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-left: 40px; /* Space for the line and markers */
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
+
+/* The Vertical Line */
 .phys-timeline::before {
   content: '';
   position: absolute;
   left: 20px;
-  top: 0;
-  bottom: 0;
+  top: 15px; /* Aligned with top arrow */
+  bottom: 15px; /* Aligned with bottom arrow */
   width: 2px;
   background: #000;
 }
+
+/* The Item Dots */
 .phys-item {
   position: relative;
   margin-bottom: 40px;
@@ -32,18 +37,34 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .phys-item::before {
   content: '';
   position: absolute;
-  left: 20px;
+  left: 20px; /* Matches line position */
   top: 5px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background: #fff;
   border: 2px solid #000;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /* Perfect centering */
   transition: all 0.2s;
   z-index: 1;
 }
 
+/* Axis Arrows (Caps) */
+.phys-arrow-top, .phys-arrow-bot {
+  position: absolute;
+  left: 20px;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #000;
+  z-index: 2;
+  background: #fff; /* Mask behind arrow to break the line visually */
+  padding: 0 4px;
+}
+.phys-arrow-top { top: 0px; }
+.phys-arrow-bot { bottom: 0px; }
+
+/* Color Coding Logic */
 .ism.active::before { background: #0066cc; border-color: #0066cc; }
 .ism.active .phys-body { border-left-color: #0066cc; }
 
@@ -56,6 +77,7 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .neutron.active::before { background: #666666; border-color: #666666; }
 .neutron.active .phys-body { border-left-color: #666666; }
 
+/* Content Styles */
 .phys-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .phys-title { font-size: 0.9rem; font-weight: 600; color: #000; margin: 0; }
 .phys-badge { font-size: 0.62rem; background: #eee; color: #000; padding: 2px 6px; border-radius: 3px; }
@@ -72,22 +94,10 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .phys-concept { font-size: 0.8rem; color: #000; font-style: italic; margin: 0 0 8px; }
 .phys-desc { font-size: 0.8rem; color: #000; line-height: 1.65; margin: 0 0 8px; }
 .phys-status { font-size: 0.7rem; color: #000; margin: 0; padding-top: 8px; border-top: 1px solid #000; }
-
-.phys-axis-cap {
-  position: absolute;
-  left: 20px;
-  transform: translateX(-50%);
-  font-size: 0.7rem;
-  font-weight: bold;
-  color: #000;
-  text-align: center;
-  background: transparent;
-}
 </style>
 
 <div class="phys-timeline">
-
-  <div class="phys-axis-cap" style="top: 0px;">▲<br>large</div>
+  <div class="phys-arrow-top">▲</div>
 
   <div class="phys-item ism" onclick="togglePhys(this)">
     <div class="phys-header">
@@ -154,8 +164,7 @@ My work spans several orders of magnitude in physical scale, from studying effec
     </div>
   </div>
 
-  <div class="phys-axis-cap" style="bottom: 0px;">▼<br>small</div>
-
+  <div class="phys-arrow-bot">▼</div>
 </div>
 
 <script>
