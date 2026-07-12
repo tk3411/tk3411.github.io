@@ -25,8 +25,8 @@ main:
     children:
       - title: "MAT320"
         url: /courses/mat320/
-      - title: "PHY301"
-        url: /courses/phy301/ 
+      - title: "AST301"
+        url: /courses/ast301/ 
     
   - title: "CV"
     url: /cv/
