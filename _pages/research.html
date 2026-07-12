@@ -1,10 +1,3 @@
----
-layout: archive
-title: "Research"
-permalink: /research/
-author_profile: true
----
-
 <p style="color:#666;font-size:0.88rem;margin-bottom:2rem;">
 My work spans several orders of magnitude in physical scale, from studying effective fractions of electrons to the interstellar medium. Click to expand!
 </p>
@@ -13,7 +6,7 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .phys-timeline {
   position: relative;
   padding-left: 100px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 30px;
 }
 .phys-timeline::before {
@@ -34,8 +27,8 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .phys-item::before {
   content: '';
   position: absolute;
-  left: -18px;
-  top: 11px;
+  left: -25px;
+  top: 5px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -51,11 +44,11 @@ My work spans several orders of magnitude in physical scale, from studying effec
 .phys-scale-label {
   position: absolute;
   left: -100px;
-  width: 84px;
-  top: 7px;
+  width: 65px;
+  top: 3px;
   text-align: right;
   font-family: monospace;
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   color: #999;
   line-height: 1.3;
 }
@@ -116,23 +109,27 @@ My work spans several orders of magnitude in physical scale, from studying effec
 }
 .phys-axis-cap {
   position: absolute;
-  left: 78px;
-  font-size: 0.65rem;
-  color: #bbb;
+  left: 83px;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: #999;
   font-family: monospace;
+  text-align: center;
+  background-color: white;
+  padding: 2px 0;
 }
 @media (max-width: 600px) {
   .phys-timeline { padding-left: 70px; }
   .phys-timeline::before { left: 52px; }
-  .phys-item::before { left: -18px; }
-  .phys-scale-label { left: -70px; width: 54px; font-size: 0.58rem; }
-  .phys-axis-cap { left: 48px; }
+  .phys-item::before { left: -25px; }
+  .phys-scale-label { left: -70px; width: 40px; font-size: 0.58rem; }
+  .phys-axis-cap { left: 53px; }
 }
 </style>
 
 <div class="phys-timeline">
 
-  <div class="phys-axis-cap" style="top:-18px">▲ large</div>
+  <div class="phys-axis-cap" style="top: -10px;">▲<br>large</div>
 
   <div class="phys-item" onclick="togglePhys(this)">
     <div class="phys-scale-label">~10 kpc</div>
@@ -157,7 +154,7 @@ My work spans several orders of magnitude in physical scale, from studying effec
     </div>
     <div class="phys-body">
       <p class="phys-concept">Within a few tenths of a parsec of Sgr A*, the Milky Way's central supermassive black hole, bright red giant stars are far rarer than stellar population models predict.</p>
-      <p class="phys-desc">Under Professor Jeremy Goodman's supervision, I built Monte Carlo simulations tracking stellar evolution on the red giant branch alongside resonant and nonresonant two-body relaxation and stellar collisions. We find that tidal stripping by the black hole alone fails to explain the deficit: loss cone diffusion rates grow only logarithmically with stellar radius while red giant lifetimes shorten faster. Stellar collisions, amplified by the rapidly growing geometric cross section of evolving giants, seem more likely as an explanation. The simulations also predict an anisotropy in surviving red giant velocity distributions near Sgr A*.</p>
+      <p class="phys-desc">Under Professor Jeremy Goodman's supervision, I built Monte Carlo simulations tracking stellar evolution on the red giant branch alongside resonant and nonresonant two-body relaxation and stellar collisions. We find that tidal stripping by the black hole alone fails to explain the deficit; loss cone diffusion rates grow only logarithmically with stellar radius while red giant lifetimes shorten at a much faster rate. Instead, stellar collisions, amplified by the rapidly growing geometric cross section of evolving giants, seem more likely as an explanation. The simulations also predict an anisotropy in surviving red giant velocity distributions near Sgr A*.</p>
       <p class="phys-status">Published · The Astrophysical Journal 1001:109 (2026)</p>
     </div>
   </div>
@@ -171,7 +168,7 @@ My work spans several orders of magnitude in physical scale, from studying effec
     </div>
     <div class="phys-body">
       <p class="phys-concept">Post-red supergiant yellow hypergiants are among the most extreme evolved massive stars known.</p>
-      <p class="phys-desc">Under Dr. Evgenia Koumpia's supervision, I analyzed the L and M band spectral and interferometric data for IRAS 17163–3907 and IRC+10420*. The analysis constrains the spatial structure, mass-loss rate, and geometry of the circumstellar envelope across multiple angular scales.</p>
+      <p class="phys-desc">Under Dr. Evgenia Koumpia's supervision, I analyzed the L and M band spectral and interferometric data for IRAS 17163–3907 and IRC+10420. The analysis constrains the spatial structure, mass-loss rate, and geometry of the circumstellar envelope across multiple angular scales.</p>
       <p class="phys-status">Published · Astronomy & Astrophysics 709:A83 (2026)</p>
     </div>
   </div>
@@ -184,13 +181,27 @@ My work spans several orders of magnitude in physical scale, from studying effec
       <span class="phys-hint">expand ↓</span>
     </div>
     <div class="phys-body">
-      <p class="phys-concept">Binary neutron star emit detectable gravitational waves close to merger, whose waveform encodes each star's internal structure, offering a direct probe of their interior nuclear matter at a combination of density and temperature (currently) unreproducible on Earth.</p>
+      <p class="phys-concept">Binary neutron stars emit detectable gravitational waves close to merger, whose waveform encodes each star's internal structure, offering a direct probe of their interior nuclear matter at a combination of density and temperature (currently) unreproducible on Earth.</p>
       <p class="phys-desc">In my senior thesis with Dr. Abhishek Hegade and Professor Sylvia Biscoveanu, I studied how dynamical tides modify the gravitational waveform during binary inspiral. Accurately modeling these tidal signatures is essential for inverting future LIGO/Virgo/KAGRA detections into constraints on the nuclear equation of state.</p>
       <p class="phys-status">Undergraduate thesis · Princeton University (2026)</p>
     </div>
   </div>
 
-  <div class="phys-axis-cap" style="bottom:-22px">▼ small</div>
+  <div class="phys-item" onclick="togglePhys(this)">
+    <div class="phys-scale-label">~10 nm</div>
+    <div class="phys-header">
+      <span class="phys-title">Classification of FQH Ground States</span>
+      <span class="phys-badge">nanometers</span>
+      <span class="phys-hint">expand ↓</span>
+    </div>
+    <div class="phys-body">
+      <p class="phys-concept">Fractional Quantum Hall (FQH) states reveal the rich topological order of electronic systems under high magnetic fields.</p>
+      <p class="phys-desc">I am investigating the classification of FQH states projected to the lowest Landau level (LLL) on various geometries, applying tools from category theory to describe gapped quantum liquids and associated topological phenomena.</p>
+      <p class="phys-status">Ongoing · 2026</p>
+    </div>
+  </div>
+
+  <div class="phys-axis-cap" style="bottom: -25px;">▼<br>small</div>
 
 </div>
 
