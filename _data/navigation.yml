@@ -11,8 +11,11 @@ main:
   - title: "Research"
     url: /research/
 
-  #- title: "Talks"
-    #url: /talks/    
+  - title: "Notes"
+    url: /notes/
+    children:
+      - title: "Algebraic Topology in Physics"
+        url: /courses/algtop/
 
   #- title: "Teaching"
     #url: /teaching/    
