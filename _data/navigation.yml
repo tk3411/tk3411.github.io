@@ -11,11 +11,11 @@ main:
   - title: "Research"
     url: /research/
 
-  - title: "Notes"
-    url: /notes/
-    children:
-      - title: "Algebraic Topology in Physics"
-        url: /courses/algtop/
+  #- title: "Notes"
+    #url: /notes/
+    #children:
+      #- title: "Algebraic Topology in Physics"
+       # url: /courses/algtop/
 
   #- title: "Teaching"
     #url: /teaching/    
