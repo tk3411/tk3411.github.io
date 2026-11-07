@@ -19,7 +19,7 @@ Welcome to my teaching archive. Linked are relevant course materials for the cla
 
 * **[MAT320: Real Analysis](https://registrar.princeton.edu/course-offerings/course-details?term=1262&courseid=004177)**  
   *Fall 2025*  
-  Brief review of MAT215, introduction to measure theory, Lebesgue integration, function spaces.
+  Brief review of [MAT215](https://registrar.princeton.edu/course-offerings/course-details?term=1262&courseid=004158), introduction to measure theory, Lebesgue integration, function spaces.
 
 * **[AST301: General Relativity](https://registrar.princeton.edu/course-offerings/course-details?term=1262&courseid=000724)**  
   *Fall 2025*  
