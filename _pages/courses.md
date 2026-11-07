@@ -17,7 +17,7 @@ Welcome to my teaching archive. Linked are relevant course materials for the cla
 
 ### Past Courses
 
-* **[MAT320: Real Analysis](https://registrar.princeton.edu/course-offerings/course-details?term=1262&courseid=000724](https://registrar.princeton.edu/course-offerings/course-details?term=1262&courseid=004177)**  
+* **[MAT320: Real Analysis](https://registrar.princeton.edu/course-offerings/course-details?term=1262&courseid=004177)**  
   *Fall 2025*  
   Brief review of MAT215, introduction to measure theory, Lebesgue integration, function spaces.
 
